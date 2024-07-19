@@ -10,11 +10,11 @@ apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend draxler-frontend
+frontend oreste-frontend
         bind *:80
         mode http
-        default_backend draxler-backend
-backend draxler-backend
+        default_backend oreste-backend
+backend oreste-backend
         balance roundrobin
         server 6234-web-01 54.227.174.231 check
         server 6234-web-02 54.221.172.173 check
